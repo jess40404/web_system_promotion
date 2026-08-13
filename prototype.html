@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipamana, Huwag Ipamina! | Defend Sibuyan & the Philippines</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <div class="top-accent-bar"></div>
+
+    <!-- Fullscreen Parallax Intro Overlay -->
+    <div id="hero-overlay" onclick="startExperience()">
+        <h1>IPAMANA, HUWAG IPAMINA!</h1>
+        <p>Protecting Sibuyan Island & the Philippines from Irreversible Mining Destruction.</p>
+        <div class="cta-pill">CLICK ANYWHERE TO EXPLORE</div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-logo">DEFEND PHILIPPINE NATURE</div>
+            <div class="nav-links">
+                <button id="nav-btn-0" onclick="goToSection(0, event)">Operations</button>
+                <button id="nav-btn-1" onclick="goToSection(1, event)">7 Critical Impacts</button>
+                <button id="nav-btn-2" onclick="goToSection(2, event)">Inclusive Green Jobs</button>
+                <button id="nav-btn-3" onclick="goToSection(3, event)">Economy & Innovation</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Parallax Viewport -->
+    <div class="main-viewport" onclick="handleViewportClick(event)">
+
+        <!-- Section 1: Philippine Mining Crisis & Key Operations -->
+        <section id="issue" class="section-slide active">
+            <div class="glass-card-content">
+                <h2 class="section-title">Mining Operations in the Philippines</h2>
+                <p style="text-align: center; color: #b5b8bd; margin-bottom: 25px;">
+                    While Sibuyan Island (known as the "Galapagos of Asia" for its unique wildlife) actively resists open-pit nickel mining, many other rare and protected nature spots across the Philippines are also in grave danger from large corporate mining projects. 
+                </p>
+
+                <div class="ops-list">
+                    <div class="op-box">
+                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                            <h3>Sibuyan Island, Romblon</h3>
+                            <p><strong>Primary Mineral:</strong> Nickel</p>
+                            <p>Threatens pristine watersheds and endemic biodiversity of Mt. Guiting-Guiting.</p>
+                        </div>
+                    </div>
+                    <div class="op-box">
+                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                            <h3>Surigao del Norte & Dinagat</h3>
+                            <p><strong>Primary Mineral:</strong> Nickel Ore</p>
+                            <p>Extensive strip mining causing heavy red siltation along coastal fisheries.</p>
+                        </div>
+                    </div>
+                    <div class="op-box">
+                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                            <h3>Tampakan, South Cotabato</h3>
+                            <p><strong>Primary Mineral:</strong> Copper & Gold</p>
+                            <p>One of Southeast Asia's largest undeveloped sites, threatening agricultural rivers.</p>
+                        </div>
+                    </div>
+                    <div class="op-box">
+                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                            <h3>Benguet & Cordillera Region</h3>
+                            <p><strong>Primary Mineral:</strong> Gold & Copper</p>
+                            <p>Centuries of extraction leading to severe mountain landslide vulnerabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The 7 Negative Effects of Mining -->
+        <section id="impacts" class="section-slide">
+            <div class="glass-card-content">
+                <h2 class="section-title">7 Negative Effects of Unchecked Mining</h2>
+                <p style="text-align: center; color: #94a3b8; margin-bottom: 20px;">(Click any card for full impact breakdown)</p>
+                
+                <div class="effects-grid">
+                    <div class="effect-card" onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                        <h3>⚠️ 1. Job Loss</h3>
+                        <p>Temporary booms lead to permanent economic crashes once minerals run dry.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('2. Habitat Loss & Species Extinction', 'Stripping forests destroys endemic flora and fauna unique to the Philippines. Animals lose feeding and breeding grounds, driving irreplaceable species to extinction. Preserving intact habitats safeguards natural ecological balances.')">
+                        <h3>🐾 2. Habitat Loss</h3>
+                        <p>Endemic wildlife species are permanently displaced and pushed toward extinction.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('3. Toxic Water Pollution', 'Heavy metal runoff, tailing pond leaks, and acid mine drainage poison rivers, tap water, and marine reefs. This destroys fishing industries and spreads toxic diseases. Stopping extraction keeps life-sustaining watersheds clean.')">
+                        <h3>💧 3. Water Pollution</h3>
+                        <p>Toxic runoffs poison drinking watersheds and ruin coastal fishing grounds.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('4. Air Pollution & Respiratory Risks', 'Dust particles containing heavy metals contaminate air quality across surrounding towns, leading to chronic respiratory illnesses among locals. Halting mining protects community public health.')">
+                        <h3>💨 4. Air Pollution</h3>
+                        <p>Heavy mineral dust causes widespread lung diseases in nearby communities.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('5. Severe Soil Erosion & Landslides', 'Removing protective tree canopies weakens mountain slopes. Rainy seasons trigger fatal flash floods and mudslides that wipe out downstream villages and agricultural farmlands.')">
+                        <h3>⛰️ 5. Soil Erosion & Landslides</h3>
+                        <p>Stripped mountain slopes crumble into fatal mudslides during typhoons.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('6. Massive Forest Loss', 'Clearing ancient forests eliminates critical carbon sinks needed to combat climate change, increasing global warming and localized heatwaves. Forests must be left intact for climate protection.')">
+                        <h3>🌲 6. Forest Loss</h3>
+                        <p>Deforestation destroys natural carbon sinks and triggers severe climate shifts.</p>
+                    </div>
+
+                    <div class="effect-card" onclick="openModal('7. Permanent Loss of Natural Resources', 'Minerals are non-renewable. Once extracted, they are exported for short-term corporate profit, forever depleting the nation\'s natural inheritance while leaving behind unlivable craters.')">
+                        <h3>🚫 7. Loss of Natural Resources</h3>
+                        <p>Irreplaceable natural wealth is extracted for short-term foreign export profit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Inclusive Green Work Alternatives -->
+        <section id="alternatives" class="section-slide">
+            <div class="glass-card-content">
+                <h2 class="section-title">Inclusive Green Jobs & Industry Transition</h2>
+                <p style="text-align: center; color: #94a3b8; margin-bottom: 25px;">
+                    A green transition supports everyone—offering accessible livelihoods for miners without formal schooling or degrees, while transforming mining companies into restoration enterprises.
+                </p>
+
+                <div class="jobs-grid">
+                    <div class="job-card">
+                        <span class="badge-tag">NO DEGREE REQUIRED</span>
+                        <h3>Reforestation & Seed Nursery Specialist</h3>
+                        <p>Miners possess unmatched physical stamina and field terrain knowledge. They can be employed directly in native tree seed propagation, mountain soil stabilization, and ecosystem restoration.</p>
+                    </div>
+
+                    <div class="job-card">
+                        <span class="badge-tag">NO DEGREE REQUIRED</span>
+                        <h3>Eco-Ranger & Forest Protection Patrol</h3>
+                        <p>Former miners can transition into paid community forest guards (Bantay Gubat) and marine wardens (Bantay Dagat) to protect protected watersheds against illegal activity.</p>
+                    </div>
+
+                    <div class="job-card">
+                        <span class="badge-tag">SKILL TRANSFER / OPERATORS</span>
+                        <h3>Eco-Restoration Equipment Operators</h3>
+                        <p>Heavy equipment operators trained on mining excavators can repurpose their skills toward building terraced slopes, land rehabilitation, and drainage engineering for eco-parks.</p>
+                    </div>
+
+                    <div class="job-card">
+                        <span class="badge-tag">FOR MINING CORPORATIONS</span>
+                        <h3>Corporate Ecological Rehabilitation Services</h3>
+                        <p>Mining entities must legally shift business models toward environmental remediation, sustainable renewable energy development, and bio-diverse agroforestry investments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Nature, Economy & Innovation Lessons -->
+        <section id="broadcast" class="section-slide">
+            <div class="glass-card-content">
+                <h2 class="section-title">Economic Growth & Innovation Through Nature</h2>
+                
+                <div class="lessons-box">
+                    <div class="lesson-item">
+                        <h4>1. Nature is Our Core Economic Engine</h4>
+                        <p>Protecting clean water sources allows farming, fishing, and tourism to support communities for generations, whereas a single mine can permanently destroy those lasting resources.</p>
+                    </div>
+
+                    <div class="lesson-item">
+                        <h4>2. Green Innovation & Circular Economy</h4>
+                        <p>Rather than tearing up the earth for new raw materials, real progress comes from recycling existing metals, using natural materials, and building clean energy so we don't need to mine as much.</p>
+                    </div>
+
+                    <div class="lesson-item">
+                        <h4>3. Valuing Natural Capital Over Short-Term Cash</h4>
+                        <p>Strong economies value natural benefits (clean air, protection from storms, and healthy soil) as real national wealth, because protecting nature ensures long-term financial security and stability.</p>
+                    </div>
+
+                    <div class="lesson-item">
+                        <h4>4. Integrating Nature into Economic Planning</h4>
+                        <p>Future economic policies must integrate environmental sustainability, ensuring that development projects consider long-term ecological impacts and community well-being.</p>
+                    </div>
+
+                     <div class="lesson-item">
+                        <h4>5. Nature's Wealth is Irreplaceable </h4>
+                        <p> The quick money made from selling unprocessed nickel isn't worth the permanent destruction of untouched nature that provides us with clean air, fresh water, and climate protection.</p>
+                    </div>
+
+                    <div class="lesson-item">
+                        <h4>6. Solidarity Shielding </h4>
+                        <p>Protecting nature isn't just an idea it is local people defending their community. When residents stand together to protect their land, they become the strongest defense against environmental destruction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Step Progress Dots -->
+    <div class="step-indicator">
+        <div class="dot active" id="dot-0"></div>
+        <div class="dot" id="dot-1"></div>
+        <div class="dot" id="dot-2"></div>
+        <div class="dot" id="dot-3"></div>
+    </div>
+
+    <!-- Dynamic Modal Popup -->
+    <div class="modal-overlay" id="infoModal" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeModal()">✕</button>
+            <h3 id="modal-title" style="color: var(--accent-green); margin-bottom: 12px; font-size: 1.4rem;"></h3>
+            <p id="modal-desc" style="color: #cbd5e1; line-height: 1.7; font-size: 1rem;"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

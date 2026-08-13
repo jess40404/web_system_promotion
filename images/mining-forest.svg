@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#eef6eb"/>
+  <rect x="0" y="300" width="600" height="100" fill="#cfe0bf"/>
+  <path d="M60 300 L140 180 L220 300 Z" fill="#3f6b34"/>
+  <path d="M140 300 L240 120 L320 300 Z" fill="#4d7b3e"/>
+  <path d="M250 300 L360 150 L450 300 Z" fill="#5f8f47"/>
+  <path d="M380 300 L470 190 L540 300 Z" fill="#3f6b34"/>
+  <rect x="80" y="320" width="36" height="40" fill="#6d4c41"/>
+  <rect x="280" y="320" width="36" height="40" fill="#6d4c41"/>
+  <rect x="440" y="320" width="36" height="40" fill="#6d4c41"/>
+  <path d="M220 210 C250 145, 320 135, 350 210" stroke="#8f4b2f" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M150 140 C178 85, 235 50, 267 90" stroke="#8f4b2f" stroke-width="16" fill="none" stroke-linecap="round"/>
+</svg>
