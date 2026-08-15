@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ipamana, Huwag Ipamina! | Defend Sibuyan & the Philippines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
@@ -12,15 +15,19 @@
 
     <!-- Fullscreen Parallax Intro Overlay -->
     <div id="hero-overlay" onclick="startExperience()">
+        <span class="sub-eyebrow">PHILIPPINE MINING, THOUGHTFULLY ADVANCED</span>
         <h1>IPAMANA, HUWAG IPAMINA!</h1>
-        <p>Protecting Sibuyan Island & the Philippines from Irreversible Mining Destruction.</p>
-        <div class="cta-pill">CLICK ANYWHERE TO EXPLORE</div>
+        <p>Protecting the Philippines from Irreversible Mining Destruction.</p>
+        <div class="cta-pill">CLICK TO EXPLORE ↘</div>
     </div>
 
     <!-- Navigation Header -->
     <nav class="nav-container">
         <div class="nav-content">
-            <div class="nav-logo">DEFEND PHILIPPINE NATURE</div>
+            <div class="nav-logo">
+                <span class="logo-icon">⛰</span>
+                DEFEND PHILIPPINE NATURE
+            </div>
             <div class="nav-links">
                 <button id="nav-btn-0" onclick="goToSection(0, event)">Operations</button>
                 <button id="nav-btn-1" onclick="goToSection(1, event)">7 Critical Impacts</button>
@@ -36,35 +43,43 @@
         <!-- Section 1: Philippine Mining Crisis & Key Operations -->
         <section id="issue" class="section-slide active">
             <div class="glass-card-content">
+                <div class="section-header-badge"></div>
                 <h2 class="section-title">Mining Operations in the Philippines</h2>
-                <p style="text-align: center; color: #b5b8bd; margin-bottom: 25px;">
-                    While Sibuyan Island (known as the "Galapagos of Asia" for its unique wildlife) actively resists open-pit nickel mining, many other rare and protected nature spots across the Philippines are also in grave danger from large corporate mining projects. 
+                <p class="section-lead">
+                    The Philippines is positioned at the heart of a dynamic Asia-Pacific economy, with diverse mineral endowments and a growing focus on responsible resource development. Its mining sector supports livelihoods, regional infrastructure, and international supply chains. 
                 </p>
+
+                <!-- Featured Image Showcase for Mining Operations -->
+                <div class="operations-feature-banner">
+                    <div class="feature-img-wrapper">
+                        <img src="mountain.jpg" class="ops-main-img" />
+                    </div>
+                </div>
 
                 <div class="ops-list">
                     <div class="op-box">
-                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                        <div onclick="openOpModal('Sibuyan Island, Romblon', 'Unchecked mining on Sibuyan Island destroys its pristine forests, poisons rivers with heavy silt, and threatens rare species found nowhere else on Earth. For the local people, it destroys their primary source of clean drinking water and ruins their fishing and farming livelihoods.', 'mining1.jpg')">
                             <h3>Sibuyan Island, Romblon</h3>
                             <p><strong>Primary Mineral:</strong> Nickel</p>
                             <p>Threatens pristine watersheds and endemic biodiversity of Mt. Guiting-Guiting.</p>
                         </div>
                     </div>
                     <div class="op-box">
-                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                        <div onclick="openOpModal('Surigao del Norte & Dinagat', 'Extensive nickel strip mining causes severe land degradation and heavy red siltation that contaminates coastal waters. For the local people, this runoff ruins their fishing grounds and pollutes freshwater supplies, directly threatening their daily health and coastal livelihoods.', 'mining2.jpg')">
                             <h3>Surigao del Norte & Dinagat</h3>
                             <p><strong>Primary Mineral:</strong> Nickel Ore</p>
                             <p>Extensive strip mining causing heavy red siltation along coastal fisheries.</p>
                         </div>
                     </div>
                     <div class="op-box">
-                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                        <div onclick="openOpModal('Tampakan, South Cotabato', 'Massive open-pit mining operations disrupt critical agricultural watersheds and strip vast areas of native vegetation. For the local people, this endangers their vital irrigation and drinking water sources while forcing indigenous communities off their ancestral lands.', 'mining3.jpg')">
                             <h3>Tampakan, South Cotabato</h3>
                             <p><strong>Primary Mineral:</strong> Copper & Gold</p>
                             <p>One of Southeast Asia's largest undeveloped sites, threatening agricultural rivers.</p>
                         </div>
                     </div>
                     <div class="op-box">
-                        <div  onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
+                        <div onclick="openOpModal('Benguet & Cordillera Region', 'Centuries of intensive mining have severely weakened mountain slopes and stripped natural forest cover. For the local people, this leads to frequent, deadly landslides that destroy homes and pollutes the freshwater streams relied on for mountain farming.', 'mining4.jpg')">
                             <h3>Benguet & Cordillera Region</h3>
                             <p><strong>Primary Mineral:</strong> Gold & Copper</p>
                             <p>Centuries of extraction leading to severe mountain landslide vulnerabilities.</p>
@@ -77,9 +92,8 @@
         <!-- Section 2: The 7 Negative Effects of Mining -->
         <section id="impacts" class="section-slide">
             <div class="glass-card-content">
-                <h2 class="section-title">7 Negative Effects of Unchecked Mining</h2>
-                <p style="text-align: center; color: #94a3b8; margin-bottom: 20px;">(Click any card for full impact breakdown)</p>
-                
+                <div class="section-header-badge">— WHY WE DEFEND NATURE</div>
+                <h2 class="section-title">7 Negative Effects of Unchecked Mining</h2>                
                 <div class="effects-grid">
                     <div class="effect-card" onclick="openModal('1. Job Loss & Economic Instability', 'Mining promises rapid employment but delivers temporary bust-and-boom cycles. Once reserves are drained, operations shut down, leaving communities without livelihood skills, stranded in poisoned landscapes with zero agricultural viability. Stopping mining enables permanent, sustainable local jobs.')">
                         <h3>⚠️ 1. Job Loss</h3>
@@ -123,25 +137,25 @@
         <section id="alternatives" class="section-slide">
             <div class="glass-card-content">
                 <h2 class="section-title">Inclusive Green Jobs & Industry Transition</h2>
-                <p style="text-align: center; color: #94a3b8; margin-bottom: 25px;">
+                <p class="section-lead">
                     A green transition supports everyone—offering accessible livelihoods for miners without formal schooling or degrees, while transforming mining companies into restoration enterprises.
                 </p>
 
                 <div class="jobs-grid">
                     <div class="job-card">
-                        <span class="badge-tag">NO DEGREE REQUIRED</span>
+                        <span class="badge-tag">FOR MINERS </span>
                         <h3>Reforestation & Seed Nursery Specialist</h3>
                         <p>Miners possess unmatched physical stamina and field terrain knowledge. They can be employed directly in native tree seed propagation, mountain soil stabilization, and ecosystem restoration.</p>
                     </div>
 
                     <div class="job-card">
-                        <span class="badge-tag">NO DEGREE REQUIRED</span>
+                        <span class="badge-tag">FOR MINERS</span>
                         <h3>Eco-Ranger & Forest Protection Patrol</h3>
                         <p>Former miners can transition into paid community forest guards (Bantay Gubat) and marine wardens (Bantay Dagat) to protect protected watersheds against illegal activity.</p>
                     </div>
 
                     <div class="job-card">
-                        <span class="badge-tag">SKILL TRANSFER / OPERATORS</span>
+                        <span class="badge-tag">FOR OPERATORS</span>
                         <h3>Eco-Restoration Equipment Operators</h3>
                         <p>Heavy equipment operators trained on mining excavators can repurpose their skills toward building terraced slopes, land rehabilitation, and drainage engineering for eco-parks.</p>
                     </div>
@@ -208,8 +222,11 @@
     <div class="modal-overlay" id="infoModal" onclick="closeModal()">
         <div class="modal-box" onclick="event.stopPropagation()">
             <button class="close-modal" onclick="closeModal()">✕</button>
-            <h3 id="modal-title" style="color: var(--accent-green); margin-bottom: 12px; font-size: 1.4rem;"></h3>
-            <p id="modal-desc" style="color: #cbd5e1; line-height: 1.7; font-size: 1rem;"></p>
+            <h3 id="modal-title" style="color: var(--gold-accent); margin-bottom: 16px; font-size: 1.5rem; font-weight: 700;"></h3>
+            <div id="modal-img-container" style="display: none; margin-bottom: 16px;">
+                <img id="modal-img" src="" alt="Operation image" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;" />
+            </div>
+            <p id="modal-desc" style="color: #4b5563; line-height: 1.7; font-size: 1.05rem;"></p>
         </div>
     </div>
 
