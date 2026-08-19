@@ -1,85 +1,34 @@
-let currentSectionIndex = 0;
-const slides = document.querySelectorAll('.section-slide');
-const dots = document.querySelectorAll('.dot');
-const navBtns = document.querySelectorAll('.nav-links button');
 let overlayDismissed = false;
 
 function startExperience() {
     const overlay = document.getElementById('hero-overlay');
     overlay.classList.add('zoomed-out');
     overlayDismissed = true;
-    updateSlideUI();
 }
 
-function handleViewportClick(e) {
-    if (!overlayDismissed) return;
-    if (e.target.closest('.glass-card-content') || e.target.closest('.nav-container') || e.target.closest('.modal-overlay')) {
-        return;
+function showPage(pageId) {
+    // Dismiss hero cover if active
+    if (!overlayDismissed) {
+        startExperience();
     }
-    nextSection();
-}
 
-function nextSection() {
-    if (currentSectionIndex < slides.length - 1) {
-        currentSectionIndex++;
-    } else {
-        currentSectionIndex = 0;
+    // Hide all pages
+    const pages = document.querySelectorAll('.page-section');
+    pages.forEach(page => page.classList.remove('active'));
+
+    // Remove active status from header navigation buttons
+    const navButtons = document.querySelectorAll('.nav-links button');
+    navButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Show target page
+    document.getElementById('page-' + pageId).classList.add('active');
+
+    // Highlight corresponding header button
+    const activeBtn = document.getElementById('btn-' + pageId);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
     }
-    updateSlideUI();
-}
 
-function goToSection(index, e) {
-    if (e) e.stopPropagation();
-    if (!overlayDismissed) startExperience();
-    currentSectionIndex = index;
-    updateSlideUI();
+    // Smooth scroll top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-function updateSlideUI() {
-    slides.forEach((slide, idx) => {
-        slide.classList.toggle('active', idx === currentSectionIndex);
-    });
-    dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentSectionIndex);
-    });
-    navBtns.forEach((btn, idx) => {
-        btn.classList.toggle('active', idx === currentSectionIndex);
-    });
-}
-
-function openModal(title, desc) {
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-desc').innerText = desc;
-    document.getElementById('modal-img-container').style.display = 'none';
-    document.getElementById('infoModal').classList.add('active');
-}
-
-function openOpModal(title, desc, imgSrc) {
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-desc').innerText = desc;
-    const imgContainer = document.getElementById('modal-img-container');
-    const imgTag = document.getElementById('modal-img');
-    imgTag.src = imgSrc;
-    imgContainer.style.display = 'block';
-    document.getElementById('infoModal').classList.add('active');
-}
-
-function closeModal() {
-    document.getElementById('infoModal').classList.remove('active');
-}
-
-/* Keyboard Controls */
-document.addEventListener('keydown', (e) => {
-    if (e.code === 'Space' || e.code === 'ArrowRight') {
-        if (!overlayDismissed) {
-            startExperience();
-        } else {
-            nextSection();
-        }
-    } else if (e.code === 'ArrowLeft' && currentSectionIndex > 0) {
-        currentSectionIndex--;
-        updateSlideUI();
-    } else if (e.code === 'Escape') {
-        closeModal();
-    }
-});
